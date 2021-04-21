@@ -6,7 +6,9 @@
       "why-vuetify",
       "long-term-support",
       "roadmap",
-      "consulting",
+      { "divider": true },
+      { "heading": "professional-support" },
+      "support",
       "enterprise"
     ]
   },
@@ -32,7 +34,7 @@
       "bidirectionality",
       "breakpoints",
       "global-config",
-      "icons",
+      "icon-fonts",
       "internationalization",
       "layouts",
       "presets",
@@ -104,6 +106,7 @@
           "inputs",
           "overflow-btns",
           "radio-buttons",
+          "range-sliders",
           "selects",
           "sliders",
           "switches",

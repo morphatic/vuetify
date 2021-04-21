@@ -61,7 +61,7 @@ The `v-file-input` can contain multiple files at the same time when using the **
 
 #### Prepend icon
 
-The `v-file-input` has a default `prepend-icon` that can be set on the component or adjusted globally. More information on changing global components can be found on the [customizing icons page](/features/icons).
+The `v-file-input` has a default `prepend-icon` that can be set on the component or adjusted globally. More information on changing global components can be found on the [customizing icons page](/features/icon-fonts).
 
 <example file="v-file-input/prop-prepend-icon" />
 
@@ -73,7 +73,7 @@ The displayed size of the selected file(s) can be configured with the **show-siz
 
 #### Validation
 
-Similar to other inputs, you can use the **rules** prop to can create your own custom validation parameters.
+Similar to other inputs, you can use the **rules** prop to create your own custom validation parameters.
 
 <example file="v-file-input/prop-validation" />
 

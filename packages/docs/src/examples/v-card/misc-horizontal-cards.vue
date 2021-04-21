@@ -38,7 +38,7 @@
             color="#385F73"
             dark
           >
-            <v-card-title class="headline">
+            <v-card-title class="text-h5">
               Unlimited music now
             </v-card-title>
 
@@ -64,13 +64,13 @@
             <div class="d-flex flex-no-wrap justify-space-between">
               <div>
                 <v-card-title
-                  class="headline"
+                  class="text-h5"
                   v-text="item.title"
                 ></v-card-title>
 
                 <v-card-subtitle v-text="item.artist"></v-card-subtitle>
 
-                <v-card-action>
+                <v-card-actions>
                   <v-btn
                     v-if="item.artist === 'Ellie Goulding'"
                     class="ml-2 mt-3"
@@ -92,7 +92,7 @@
                   >
                     START RADIO
                   </v-btn>
-                </v-card-action>
+                </v-card-actions>
               </div>
 
               <v-avatar

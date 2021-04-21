@@ -19,7 +19,7 @@
               <v-slide-item
                 v-for="(prop) in tabs"
                 :key="prop"
-                #default="{ active, toggle }"
+                v-slot="{ active, toggle }"
               >
                 <v-btn
                   :input-value="active"
@@ -182,11 +182,14 @@
   export default {
     name: 'Usage',
 
-    inject: ['theme'],
-
     mixins: [Codepen],
 
-    props: { name: String },
+    inject: ['theme'],
+
+    props: {
+      name: String,
+      alt: String,
+    },
 
     data: () => ({
       booleans: undefined,
@@ -211,6 +214,7 @@
       },
       formatAttributes () {
         let attributeArray = []
+        const tag = this.alt || this.name
         for (const [key, value] of Object.entries(this.usageProps)) {
           if (!!value === false) continue
 
@@ -224,9 +228,9 @@
         attributeArray = attributeArray.sort()
 
         const indent = attributeArray.length ? '\r  ' : ''
-        const tail = `${attributeArray.length ? '\r' : ''}></${this.name}>`
+        const tail = `${attributeArray.length ? '\r' : ''}></${tag}>`
 
-        return `<${this.name}${indent}${attributeArray.join('\r  ')}${tail}`
+        return `<${tag}${indent}${attributeArray.join('\r  ')}${tail}`
       },
     },
 
